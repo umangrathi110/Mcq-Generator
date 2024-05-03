@@ -1,0 +1,5 @@
+PyPdf2
+langchain
+openai
+python-dotenv
+streamlit
