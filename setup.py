@@ -8,7 +8,7 @@ setup(
     author_email='umangrathi110@gmail.com',
     install_requires=['openai', 'langchain', 'streamlit', 'python-dotenv','PyPdf2'],
     packages=find_packages()   
-    # this find_packages() is responsible for finding the local packages from you local directiory (whenever it foudnd the __init__.py it consider this as a package)
+    # this find_packages() is responsible for finding the local packages from you local directiory (whenever it found the __init__.py it consider this as a package)
 )
 
 

@@ -8,6 +8,10 @@ step 4 -> creating web API using streamlit
 Step 5 -> Deploy application on cloud platform (AWS)
 
 
+<!-- Command for creating the virtual environment -->
+python -m venv env_name
+
+
 
 
 <!-- Why we created the __init__.py file  -->
