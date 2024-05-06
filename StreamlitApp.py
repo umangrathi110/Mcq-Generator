@@ -24,13 +24,13 @@ with st.form ("user_inputs"):
     uploaded_file= st.file_uploader("Upload a pdf or txt file")
 
     # Input fields 
-    mcq_count = st.number_input("Enter the numer of MCQ ", min_value=3, max_value= 50)
+    mcq_count = st.number_input("Number of MCQs ", min_value=3, max_value= 50)
     
     # Subject
     subject= st.text_input("Enter Subject", max_chars=20)
 
     # Quiz Tone
-    tone= st.selectbox("Select an option", ["Simple", "Medium", "Hard"])
+    tone= st.selectbox("Difficulty Level", ["Simple", "Medium", "Hard"])
 
     # Adding Button 
     button = st.form_submit_button("Generate MCQs")
