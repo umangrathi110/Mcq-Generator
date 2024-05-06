@@ -11,7 +11,7 @@ from src.mcq_generator.logger import logging
 
 
 # loading the json file 
-with open ('/home/umang.rathi/Documents/mcq_generator/response.json', 'r') as file:
+with open ('response.json', 'r') as file:
     data = file.read()
     RESPONSE_JSON = json.loads(data)
 
