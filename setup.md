@@ -1,25 +1,41 @@
-MCQ Generator using OpenAI and Langchain 
+# MCQ Generator using OpenAI and Langchain
 
-steps -
-step 1 -> setting up the development environment 
-step 2 -> few experiment in jupyter lab 
-step 3 -> converted into modular coding 
-step 4 -> creating web API using streamlit 
-Step 5 -> Deploy application on cloud platform (AWS)
+## Steps
+
+### Step 1: Setting up the Development Environment
+
+```bash
+python -m venv env
+```
+
+### Step 2: Experimentation in Jupyter Lab
+
+Explore and experiment with the project in Jupyter Lab. This step involves creating and testing various ideas and functionalities.
+
+### Step 3: Modular Coding
+
+Convert the experiments and code into modular components for better organization and maintainability.
+
+### Step 4: Creating Web API using Streamlit
+
+Utilize Streamlit to create a user-friendly web interface for the MCQ generator.
+
+### Step 5: Deploy Application on Cloud Platform (AWS)
+
+Deploy the finalized application on a cloud platform such as AWS to make it accessible to users.
+
+## Project Structure
+
+The project follows a modular structure:
+
+- `src/`: Contains the main source code for the MCQ generator.
+  - `mcq_generator/`: Package folder containing various files related to the project.
+    - `...`: Additional subfolders and files as required.
+
+- `experiments/`: Holds Jupyter Notebook files for experimentation and development.
 
 
-<!-- Command for creating the virtual environment -->
-python -m venv env_name
 
-
-
-
-<!-- Why we created the __init__.py file  -->
+#### Why we created the __init__.py file
 in the src folder there is the folder mcq_generator inside it there are several files regarding the project and to consider it as a package there is a standard to add this file.
 
-<!-- run 
-pip install -r requirement.txt 
-this will create a folder containing all the information regarding your local package-->
-
-
-=> inside the experiments folder i have created the ipynb file (jupyter notebooks)
