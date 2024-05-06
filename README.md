@@ -4,6 +4,8 @@
 
 This project is a MCQ (Multiple Choice Questions) Generator that utilizes Generative AI, specifically Langchain, to generate multiple-choice questions based on the content provided in the form of PDF or text documents. The generator extracts relevant information from the PDF content and generates MCQs according to the user given difficulty level .
 
+Also deployed this application on the AWS EC2 instance (t2.small with 20 GB Memory)
+
 ## Features
 
 - **PDF Parsing**: The generator can parse PDF documents to extract text content.
