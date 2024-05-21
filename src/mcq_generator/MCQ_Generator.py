@@ -8,7 +8,7 @@ from src.mcq_generator.utils import read_file, get_mcq_data
 from src.mcq_generator.prompt import *
 
 # importing necessary langchain packages 
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains import SequentialChain

@@ -5,9 +5,10 @@ import pandas as pd
 from dotenv import load_dotenv
 import streamlit as st
 from src.mcq_generator.utils import read_file, get_mcq_data
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 from src.mcq_generator.MCQ_Generator import evaluation_chain
 from src.mcq_generator.logger import logging 
+from src.mcq_generator.download import download_pdf
 
 
 # loading the json file 
@@ -28,6 +29,7 @@ with st.form ("user_inputs"):
     
     # Subject
     subject= st.text_input("Enter Subject", max_chars=20)
+    st.session_state['subject'] = subject
 
     # Quiz Tone
     tone= st.selectbox("Difficulty Level", ["Simple", "Medium", "Hard"])
@@ -73,13 +75,25 @@ with st.form ("user_inputs"):
                             df = pd.DataFrame(mcq_data)
                             df.index = df.index+1
                             st.table(df)
+                            st.session_state['df'] = df
                             # display the review in a text box
-                            st.text_area(label = "Review", value = response['review'])
+                            # st.text_area(label = "Review", value = response['review'])
+
                         else:
                             st.write("Error in the mcq_data")
                 
                 else:
                     st.write(response)
-
-
             
+
+# Adding download button to download the generated mcq in the pdf form 
+if 'df' in st.session_state:
+    buffer = download_pdf(st.session_state['df'], f"{st.session_state['subject']}_mcq.pdf")
+    st.download_button(
+        label="Download",
+        data=buffer,
+        file_name=f"{st.session_state['subject']}_mcq.pdf",
+        mime="application/pdf"
+    )
+else:
+    st.write("No MCQs to download")
